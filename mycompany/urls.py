@@ -26,6 +26,9 @@ urlpatterns = [
     # path('', views.Home, name='home'), # هنا نضيف الرابط للدالة
     path('admin/', admin.site.urls),
     # path('message/', views.Message, name='message'), # هنا نضيف الرابط للدالة
+    path('name/<str:name>/', acc_views.accHello), # هنا نضيف الرابط للدالة
+    path('add/<int:num1>/<int:num2>/', acc_views.addtwo), 
+    path('HomePage/', acc_views.home_page , name='home'), 
 ]
 
 

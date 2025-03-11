@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account',
     'Hr',
-    
+    'bootstrap5', 
 ]
 
 # -------here the middleware of the app are added
