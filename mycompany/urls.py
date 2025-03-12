@@ -21,14 +21,14 @@ from account import views as acc_views
 from Hr import views as hr_views
 
 urlpatterns = [
-    path('hr/', hr_views.welcomeHr, name='hrr'), # هنا نضيف الراب
-    path('acc/', acc_views.accHello, name='acc'), # هنا نضيف ال
+    path('', hr_views.welcomeHr, name='hrr'), # هنا نضيف الراب
     # path('', views.Home, name='home'), # هنا نضيف الرابط للدالة
     path('admin/', admin.site.urls),
     # path('message/', views.Message, name='message'), # هنا نضيف الرابط للدالة
-    path('name/<str:name>/', acc_views.accHello), # هنا نضيف الرابط للدالة
+    # path('name/<str:name>/', acc_views.accoHello), # هنا نضيف الرابط للدالة
     path('add/<int:num1>/<int:num2>/', acc_views.addtwo), 
-    path('HomePage/', acc_views.home_page , name='home'), 
+    path('acc/', acc_views.index, name='acc'),
+    path('about/', acc_views.about, name='about'),
 ]
 
 

@@ -62,7 +62,18 @@ ROOT_URLCONF = 'mycompany.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # here you can add the path of the template 
+        # طالما انه فارغ يعني انه يبحث في المجلد الرئيسي للتطبيق (على مستوى التطبيق)
+        # الجانجو مميز بإستقلالية التطبيق
+        # بس احيانا الصفحات مشتركة او اجزاء من الصفحة  مشتركة في كل اللصفحات
+        #المكتبات تتحمل في المتصفح واحنا لاننا اذكياء نخليها تتحمل مرة واحدة عشان يكون سريع
+        #وعشان كذا لازم يكون فيه تصميم واحد (1 Layout)
+        # فلو في صفحات لكل آاب ويحمل كل ما دخل لتطيق وهذا يبطئ الموقع
+        # توحيد التشاركية--- يعني تامليت واحد خارج التطبيقات
+        # مجلد في الخارج اسمه templates
+        # بما اننا سوينا كذا نروح للاعدادات
+        # ونضيف المسار الى--  DIRS
+        # 'DIRS': [BASE_DIR / 'templates'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
